@@ -1,13 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
-
 html {
     font-size: 20px;
     font-family: 'Lato', sans-serif;
 }
 
 .wrapper {
-    background-color: grey;
-    width: 40vmax;
+    width: 400px;
+    height: 500px;
+    margin: 30px auto;
     padding: 10px 15px;
     display: grid;
     grid-template-areas: 
@@ -20,14 +19,16 @@ html {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
     column-gap: 5px;
-    row-gap: 15px;
+    row-gap: 10px;
 }
 
 button {
     background-color: white;
     font: inherit;
-    border: none;
-    width: 70%;
+    font-weight: bold;
+    border: 1px solid;
+    border-radius: 2px;
+    width: 90%;
 }
 
 #display {
@@ -36,6 +37,8 @@ button {
     background-color: white;
     font-size: 35px;
     text-align: right;
+    border: 1px solid;
+    border-radius: 2px;
 }
 
 #zero {
@@ -108,4 +111,8 @@ button {
 
 #clear {
     grid-area: clear;
+}
+
+.operator, #clear, #bksp, #equal {
+    background: #c0ffee;
 }
