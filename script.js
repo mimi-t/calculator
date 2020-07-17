@@ -99,6 +99,13 @@ clear_button.addEventListener('click', (e) => {
     clearCalc();
 });
 
-// to do: backspace, don't allow more than one zero input (before decimal point)
+backspace_button.addEventListener('click', (e) => {
+    if (currentNumber.length == 0) {
+        return;
+    } 
+    currentNumber = currentNumber.slice(0, -1);
+    displayInput(currentNumber);
+})
+// to do: backspace
 // tweak css: round corners, fix dimensions, change colours, add box shadows, darken bg-colour of buttons when clicked
 // consider adding view of equation entered (e.g. 7 x 8 + 9)
