@@ -57,6 +57,10 @@ const displayDivideByZero = () => {
 
 number_button.forEach((button) => {
     button.addEventListener('click', (e) => {
+        if ((e.target.dataset.key === '0' && currentNumber === '0') 
+        || (e.target.dataset.key === '.' && currentNumber.includes('.'))) {
+            return;
+        }
         if (currentOperator && previousNumber === '') {
             previousNumber = currentNumber;
             currentNumber = '';
